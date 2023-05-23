@@ -139,7 +139,7 @@ export default {
 
       this.authorizedMenu[0].items.unshift(obj);
       this.unauthorizedMenu[0].items.unshift(obj);
-      await this.checkVersion();
+      // await this.checkVersion();
     } catch (error) {
       this.emitter.emit('error', error);
     }
