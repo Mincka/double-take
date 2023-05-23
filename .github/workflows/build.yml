@@ -10,7 +10,6 @@ on:
 
 jobs:
   build-docker:
-    if: github.repository == 'Mincka/double-take'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
