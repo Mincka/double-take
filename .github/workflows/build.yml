@@ -29,7 +29,7 @@ jobs:
         if: ${{ github.event.release.target_commitish == 'master' || (github.event_name == 'workflow_dispatch' && github.ref_name == 'master') }}
         run: |
           echo "ARCH=linux/amd64,linux/arm64" >> $GITHUB_ENV
-          echo "TAGS=jakowenko/double-take:latest,jakowenko/double-take:${{steps.version.outputs.prop}}" >> $GITHUB_ENV
+          echo "TAGS=mincka/double-take:latest,mincka/double-take:${{steps.version.outputs.prop}}" >> $GITHUB_ENV
       - name: Version with SHA-7
         run: |
           npm version ${{steps.version.outputs.prop}}-$(echo ${GITHUB_SHA} | cut -c1-7) --no-git-tag-version
